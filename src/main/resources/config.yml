@@ -1,0 +1,28 @@
+# NoArmor Plugin Configuration
+
+# Damage settings
+damage:
+  # Damage per second when wearing armor
+  perSecond: 4.0
+  # Whether armor damage is enabled
+  enabled: true
+
+# Messages
+messages:
+  armorDrain: "<red>Armor is draining your health!"
+  pluginEnabled: "NoArmor plugin has been enabled!"
+  pluginDisabled: "NoArmor plugin has been disabled!"
+
+# Permission settings
+permissions:
+  # Permission to bypass armor damage
+  bypass: "noarmor.bypass"
+  # Permission for admin commands
+  admin: "noarmor.admin"
+
+# Armor detection settings
+armor:
+  # Patterns for detecting armor slots
+  slotPattern: ".*(?:CHEST|LEGS|FEET|HEAD).*"
+  # Patterns for detecting armor types
+  typePattern: ".*(?:HELMET|CHESTPLATE|LEGGINGS|BOOTS|TURTLE_SHELL)$"
