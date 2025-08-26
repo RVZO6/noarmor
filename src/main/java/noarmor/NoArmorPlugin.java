@@ -54,7 +54,7 @@ public class NoArmorPlugin extends JavaPlugin implements Listener {
         damageTasks.put(playerId, Bukkit.getScheduler().runTaskTimer(this, () -> {
           player.damage(DAMAGE_PER_SECOND);
           player.sendActionBar(Component.text(ARMOR_DRAIN_MESSAGE));
-        }, 20L, 20L));
+        }, 0L, 20L));
       } else if (!hasArmor) {
         var task = damageTasks.remove(playerId);
         if (task != null)
