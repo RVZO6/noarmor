@@ -1,0 +1,19 @@
+name: NoArmor
+version: 1.0.0
+main: noarmor.NoArmorPlugin
+api-version: 1.21
+
+authors: [rvzo]
+description: A plugin that penalizes players for wearing armor by draining their health.
+website: https://github.com/rvzo/noarmor
+
+commands:
+  noarmor:
+    description: Main command for NoArmor plugin
+    usage: /<command> reload
+    permission: noarmor.admin
+
+permissions:
+  noarmor.admin:
+    description: Allows access to NoArmor admin commands
+    default: op

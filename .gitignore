@@ -1,0 +1,108 @@
+# Build outputs
+build/
+bin/
+.gradle/
+gradle-app.setting
+!gradle-wrapper.jar
+!gradle-wrapper.properties
+
+# IDE files
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+.settings/
+.project
+.classpath
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Server files (generated during testing)
+run/
+server_test.log
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# Eclipse
+.metadata
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.loadpath
+.recommenders
+
+# IntelliJ IDEA
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# NetBeans
+nb-configuration.xml
+
+# Visual Studio Code
+.vscode/
+
+# Minecraft server files
+world/
+world_nether/
+world_the_end/
+logs/
+crash-reports/
+plugins/
+config/
+banned-ips.json
+banned-players.json
+ops.json
+server.properties
+usercache.json
+whitelist.json
+eula.txt
+
+# Plugin JARs (built artifacts)
+*.jar
+!gradle-wrapper.jar
+
+# Gradle
+.gradle/
+build/
+gradle-app.setting
+
+# Maven (if used)
+target/
+
+# Node modules (if any frontend components)
+node_modules/
+
+# Backup files
+*.bak
+*.backup
+
+# Compiled class files
+*.class
+
+# Package files
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# Application specific
+# Add any project-specific files that shouldn't be tracked
