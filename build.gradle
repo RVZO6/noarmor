@@ -8,6 +8,10 @@ plugins {
 group = 'noarmor'
 version = '1.0.0'
 
+if (System.getenv('GITHUB_REF_TYPE') == 'tag') {
+    version = System.getenv('GITHUB_REF_NAME').replace('v', '')
+}
+
 repositories {
     mavenCentral()
     maven {

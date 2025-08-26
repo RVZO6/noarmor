@@ -1,0 +1,43 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Set up JDK
+      uses: actions/setup-java@v4
+      with:
+        java-version: '21'
+        distribution: 'temurin'
+
+    - name: Make gradlew executable
+      run: chmod +x ./gradlew
+
+    - name: Build plugin
+      run: ./gradlew build
+
+    - name: Create release
+      uses: softprops/action-gh-release@v1
+      with:
+        tag_name: ${{ github.ref_name }}
+        name: Release ${{ github.ref_name }}
+        body: |
+          ## Changes
+          See commit history for details.
+
+          ## Installation
+          1. Download the JAR file from the assets below
+          2. Place it in your server's `plugins` folder
+          3. Restart your server
+        files: ./build/libs/noarmor-*.jar
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
